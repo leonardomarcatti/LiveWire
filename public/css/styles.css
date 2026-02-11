@@ -1,0 +1,20 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   display: grid;
+   grid-template-columns: 1fr;
+   min-height: 100vh;
+   grid-template-rows: 50px minmax(calc(100vh - 80px), auto) 30px;
+}
+
+header,
+footer {
+   display: flex;
+   flex-flow: row nowrap;
+   align-items: center;
+   justify-content: center;
+   background-image: linear-gradient(to bottom, silver, lightblue);
+}

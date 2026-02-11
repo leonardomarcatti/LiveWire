@@ -1,0 +1,49 @@
+# version: "4.0.0"
+
+services:
+  liveWire:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: livewire
+    container_name: livewire_app
+    hostname: livewire_app
+    ports:
+      - "0.0.0.0:3000:80"
+    volumes:
+      - .:/app
+    environment:
+      - DB_CONNECTION=mysql
+      - DB_HOST=livewire_db
+      - DB_PORT=3306
+      - DB_DATABASE=livewire
+      - DB_USERNAME=admin
+      - DB_PASSWORD=A9x*UwARA5@
+    depends_on:
+      livewire_db:
+        condition: service_healthy
+    command: >
+      sh -c "php artisan serve --host=0.0.0.0 --port=80"
+
+  livewire_db:
+    image: mysql:latest
+    container_name: livewire_db
+    hostname: livewire_db
+    ports:
+        - "3305:3306" # Host:Container
+    environment:
+        - MYSQL_DATABASE=livewire
+        - MYSQL_USER=admin
+        - MYSQL_PASSWORD=A9x*UwARA5@
+        - MYSQL_ROOT_PASSWORD=a
+    volumes:
+      - db-data:/var/lib/mysql
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+volumes:
+  db-data:
