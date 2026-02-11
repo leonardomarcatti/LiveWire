@@ -25,6 +25,9 @@
 
 <p>Tudo ocorre sem reload, utilizando `wire:model` e `wire:click`.</p>
 
+<h2>Demonstração</h2>
+<img src='https://github.com/user-attachments/assets/31e45497-4e96-4c39-a0c2-21e0f6d865fb'/>
+
 <h2>🛠️ Tecnologias Utilizadas</h2>
 <ul>
     <li>PHP 8+</li>
