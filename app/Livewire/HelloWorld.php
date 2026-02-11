@@ -7,7 +7,7 @@ use Livewire\Component;
 class HelloWorld extends Component
 {
 
-    public string $name = 'Fulano(a)';
+    public string $name = 'seu nome';
     public string $newValue = '';
     public string $color = 'white';
 

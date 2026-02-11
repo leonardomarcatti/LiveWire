@@ -1,41 +1,65 @@
+<></>
+<h1>🚀 Laravel LiveWire</h1>
+<p>Projeto simples desenvolvido com <a href='https://laravel.com/' target='_blank'>Laravel 12</a> e  <a href='https://livewire.laravel.com/'  target='_blank'>Livewire</a>, executando em ambiente <a href='https://www.docker.com/'  target='_blank'></a>Docker, com foco em demonstrar reatividade no frontend sem necessidade de JavaScript manual.</p>
 
-# 🚀 Laravel 12 + Livewire - Contador Interativo
+<h2>📌 Sobre o Projeto</h2>
+<p>O projeto possui duas funcionalidades principais:</p>
 
-Projeto simples desenvolvido com **Laravel 12** e **Livewire** com o objetivo de demonstrar reatividade no frontend sem necessidade de JavaScript manual.
+<h3>🔢 1. Contador Interativo</h3>
+<p>Um contador com três botões:</p>
+<ul>
+    <li>➕ **Incrementar** → Aumenta o contador em +1</li>
+    <li>➖ **Decrementar** → Diminui o contador em -1</li>
+    <li>🔄 **Resetar** → Define o contador como 0</li>
+</ul>
+ 
+<p>Toda a atualização acontece de forma reativa utilizando Livewire, sem recarregar a página.</p>
 
-## 📌 Sobre o Projeto
+<h3>✏️ 2. Alteração de Nome Dinâmica</h3>
+<ul>
+    <li>Um campo de texto vazio</li>
+    <li>O usuário pode digitar qualquer valor</li>
+    <li>Ao clicar no botão **"Alterar Nome"**, o texto é atualizado dinamicamente na tela</li>
+    <li>O usuário pode também selecionar nomes previamente escolhidos</li>
+</ul>
 
-Este projeto possui duas funcionalidades principais:
+<p>Tudo ocorre sem reload, utilizando `wire:model` e `wire:click`.</p>
 
-### 🔢 1. Contador Interativo
+<h2>🛠️ Tecnologias Utilizadas</h2>
+<ul>
+    <li>PHP 8+</li>
+    <li>Laravel 12</li>
+    <li>Livewire</li>
+    <li>Blade</li>
+    <li>Docker</li>
+    <li>Docker Compose</li>
+    <li>Bootstrap (opcional)</li>
+</ul>
 
-Um contador com três botões:
+<h2>🐳 Executando o Projeto com Docker</h2>
+<p>Clone o repositório => git clone https://github.com/leonardomarcatti/LiveWire.git</p>
+<p>Entre na pasta da aplicação</p>
+<p>Execute o comando: docker compose up -d --build</p>
+<p>http://ip:3000</p>
 
-- ➕ **Incrementar** → Aumenta o contador em +1
-- ➖ **Decrementar** → Diminui o contador em -1
-- 🔄 **Resetar** → Define o contador como 0
+<h2>🧠 Conceitos Demonstrados</h2>
+<ul>
+    <li>Componentes Livewire</li>
+    <li>Propriedades públicas reativas</li>
+    <li>Two-way data binding (wire:model)</li>
+    <li>Eventos (wire:click)</li>
+    <li>Atualização dinâmica sem JavaScript customizado</li>
+    <li>Ambiente containerizado com Docker</li>
+</ul>
 
-Toda a atualização ocorre de forma reativa utilizando Livewire.
+<h2>🎯 Objetivo</h2>
+<p>Este projeto tem fins educacionais para demonstrar:</p>
+<p>Uso do Livewire no Laravel 12</p>
+<p>Manipulação de estado no backend refletindo no frontend</p>
+<p>Execução de aplicação Laravel dentro de container Docker</p>
 
----
+<h2>📄 Licença</h2>
+<p>Projeto desenvolvido para fins educacionais.</p>
 
-### ✏️ 2. Alteração de Nome Dinâmica
-
-Um campo de texto onde o usuário pode digitar qualquer valor.
-
-Ao clicar no botão **"Alterar Nome"**, o texto exibido na tela é atualizado dinamicamente, sem reload da página.
-
----
-
-## 🛠️ Tecnologias Utilizadas
-
-- PHP 8+
-- Laravel 12
-- Livewire
-- Blade
-- TailwindCSS (opcional, se estiver usando)
-
----
-
-## 📂 Estrutura do Projeto
-
+<h2>👨‍💻 Autor</h2>
+<p>Desenvolvido com Laravel 12 + Livewire + Docker.</p>
